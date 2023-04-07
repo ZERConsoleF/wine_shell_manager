@@ -1,0 +1,8 @@
+#!/bin/sh
+/usr/sbin/useradd wineman -r -d /opt/wine-manager/home
+echo '/opt/wine-manager/user_login.sh /opt/wine-manager/wine-manager.sh $*' > /usr/bin/wine-manager.sh
+chmod +x /usr/bin/wine-manager.sh
+/usr/bin/ln -sf /opt/wine-manager/wine-manager_function.sh /usr/bin
+echo '/opt/wine-manager/user_login.sh /opt/wine-manager/wine-manager_runner.sh $*' > /usr/bin/wine-manager_runner.sh
+chmod +x /usr/bin/wine-manager_runner.sh
+exit 0

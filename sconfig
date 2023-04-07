@@ -1,0 +1,1 @@
+SG_winec= SG_HOME=/opt/wine-manager/home SG_runner=/usr/bin/wine

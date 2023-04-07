@@ -1,0 +1,6 @@
+#!/bin/sh
+/usr/sbin/userdel wineman -f
+/usr/bin/rm -rf /usr/bin/wine-manager.sh
+/usr/bin/rm -rf /usr/bin/wine-manager_function.sh
+/usr/bin/rm -rf /usr/bin/wine-manager_runner.sh
+exit 0

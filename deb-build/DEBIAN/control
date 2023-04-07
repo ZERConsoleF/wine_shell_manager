@@ -1,0 +1,13 @@
+Package: wine-manager
+Version: 1.0.0
+Architecture: all
+Priority: optional
+Maintainer: Wine Manager
+Depends: wine, winetricks, sudo
+Suggests: bash
+Section: devel
+Essential: no
+Multi-Arch: allowed
+Homepage: 
+Description: Fake Wine Manager Installer with dpkg
+ .
