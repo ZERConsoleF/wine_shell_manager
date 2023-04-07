@@ -53,6 +53,7 @@ if [[ $yn == "Y" || $yn == "y" ]];then
   echo "cd $DEFAULT_DIR;$DEFAULT_DIR/INSTALL.sh" >> $(dirname $0)/deb-build/DEBIAN/postinst
   echo "#/bin/bash" >> $(dirname $0)/deb-build/DEBIAN/postrm
   echo "cd $DEFAULT_DIR;$DEFAULT_DIR/UNINSTALL.sh "'$*' >> $(dirname $0)/deb-build/DEBIAN/postrm
+  echo "exit 0" >> $(dirname $0)/deb-build/DEBIAN/postrm
   dpkg -b $(dirname $0)/deb-build $(dirname $0)/tmp
   dpkg -i $(dirname $0)/tmp/*
   rm -rf $(dirname $0)/tmp/*
