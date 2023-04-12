@@ -19,6 +19,15 @@
  ## Finally
   - Have Fun!
 
+ ## Fix BUGGY
+  - Fix cannot use audio when use monitor with pulseaudo.
+    - Deal with
+      - Change ```adm.sprit``` and ```wineman.sprit``` script.
+      - Use pulseaudio network thunnel and virtual sink.
+
+ ## Have BUGGY
+  - I cannot to deal with ```ffmepg``` monitor to use it!
+
 ## UPDATE Progress
  - [2023/04/07 --:--:--] Create repos
  - [2023/04/07 --:--:--] Push inital commit
@@ -26,3 +35,5 @@
  - [2023/04/07 --:--:--] Push uninstall function
  - [2023/04/08 00:00:--] Chnage README
  - [2023/04/08 00:03:--] Chnage README
+ - [2023/04/12 23:26:04] Fix up something and change install ways.
+   - PATH:./adm.sprit.d/inital.sh;./wineman.sprit.d/inital.sh
