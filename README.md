@@ -42,3 +42,8 @@
    - Fix bug:
      - pulseaudio start failure.
      - improve install and uninstall ways.
+ - [2023/04/19 20:55:35] Fix up something and change install ways (and uninstall).
+   - Fix bug:
+     - pulseaudio start failure.
+     - improve install and uninstall ways.
+     - fix user login problem.
