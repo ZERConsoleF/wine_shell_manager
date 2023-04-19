@@ -10,6 +10,7 @@ if [[ ! $(echo "$(dirname $0)" | grep /tmp) ]];then
   chmod +x /tmp/$(basename $0)
   export DDNI=$(dirname $0)
   nohup /tmp/$(basename $0) $*&
+  exit 0
 fi
 
 echo "Remove config..."

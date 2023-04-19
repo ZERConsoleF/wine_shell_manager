@@ -2,9 +2,10 @@
 sudo mkdir -p /run/user/$(id wineman -u)
 sudo chown $(id wineman -un): /run/user/$(id wineman -u)
 
-pulseaudio --check
+sudo -u $(id $SUDO_UID -un) pulseaudio --check
 if [[ $? != "0" ]];then
-   pulseaudio -D
+   sudo -u $(id $SUDO_UID -un) pulseaudio --start
+   sleep 5
 fi
 
-pactl load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1 2>/dev/null
+sudo -u $(id $SUDO_UID -un) pactl load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1 2>/dev/null

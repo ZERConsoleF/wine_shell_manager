@@ -24,9 +24,10 @@
     - Deal with
       - Change ```adm.sprit``` and ```wineman.sprit``` script.
       - Use pulseaudio network thunnel and virtual sink.
+  - Fix pulseaudio network can not output audio.
 
  ## Have BUGGY
-  - I cannot to deal with ```ffmepg``` monitor to use it!
+  - Pulseaudio maybe crash in unexcepted! 
 
 ## UPDATE Progress
  - [2023/04/07 --:--:--] Create repos
@@ -37,3 +38,7 @@
  - [2023/04/08 00:03:--] Chnage README
  - [2023/04/12 23:26:04] Fix up something and change install ways.
    - PATH:./adm.sprit.d/inital.sh;./wineman.sprit.d/inital.sh
+ - [2023/04/19 20:24:35] Fix up something and change install ways (and uninstall).
+   - Fix bug:
+     - pulseaudio start failure.
+     - improve install and uninstall ways.

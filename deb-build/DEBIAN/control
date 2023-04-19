@@ -3,7 +3,6 @@ Version: 1.0.0
 Architecture: all
 Priority: optional
 Maintainer: Wine Manager
-Depends: wine, winetricks, sudo
 Suggests: bash
 Section: devel
 Essential: no

@@ -1,0 +1,3 @@
+Defaults:%sudo env_keep += "output debug inlog log DISPLAY XAUTHORITY"
+Defaults:root env_keep += "output debug inlog log DISPLAY XAUTHORITY"
+%sudo ALL=(ALL:ALL) NOPASSWD: /bin/wine-manager_runner.sh

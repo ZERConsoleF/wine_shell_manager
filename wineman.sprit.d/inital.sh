@@ -8,9 +8,9 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 pulseaudio --check
 
 if [[ "$?" != "0" ]]; then
-   pulseaudio -D
+   pulseaudio --start
    sleep 5
-   pacmd load-module module-virtual-sink sink_name=VirtualSink
-   pacmd set-default-sink VirtualSink
+   #pacmd load-module module-virtual-sink sink_name=VirtualSink
+   #pacmd set-default-sink VirtualSink
    pactl load-module module-tunnel-sink "server=tcp:127.0.0.1 sink_name=VirtualSink"
 fi

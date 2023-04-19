@@ -45,6 +45,9 @@ echo "$DEFAULT_DIR"'/user_login.sh '"$DEFAULT_DIR"'/wine-manager_runner.sh $*' >
 chmod +x /usr/bin/wine-manager_runner.sh
 chown -R wineman: $DEFAULT_DIR
 
+echo "config sudo configure"
+ln -s $(dirname $0)/sudo_conf/wine-manager /etc/sudoers.d
+
 read -p "Do you want to install fake deb package [N/y]:" yn
 
 if [[ $yn == "Y" || $yn == "y" ]];then
