@@ -1,7 +1,8 @@
 #!/bin/bash
 
 OLD_PWD=${PWD}
-cd /opt/wine-manager
+cd $(dirname $0)
+#cd /opt/wine-manager
 xhost +>/dev/null
 
 export SUF=0

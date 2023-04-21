@@ -47,3 +47,4 @@
      - pulseaudio start failure.
      - improve install and uninstall ways.
      - fix user login problem.
+ - [2023/04/21 21:54:35] To deal with user login problems.
