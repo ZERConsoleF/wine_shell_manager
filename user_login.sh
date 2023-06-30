@@ -11,6 +11,8 @@ sudo -p 'You will login in wineman user,give me a administor password:' bash -c 
 SUF=$(sudo bash -c "echo 1")
 #bash -c "chown -R wineman: $(dirname $0);chmod -R 777 $(dirname $0)"
 
+export F_HOME=$HOME
+
 if [[ "$SUF" == "0" ]]; then
    echo "Login failure!"
    exit 127

@@ -1,6 +1,9 @@
-#!/bin/sh
-/usr/sbin/userdel wineman -f
-/usr/bin/rm -rf /usr/bin/wine-manager.sh
-/usr/bin/rm -rf /usr/bin/wine-manager_function.sh
-/usr/bin/rm -rf /usr/bin/wine-manager_runner.sh
+#/bin/bash
+case "$*" in
+    purge)
+   cd /home/xiaotuzi/wine_shell_manager;/home/xiaotuzi/wine_shell_manager/UNINSTALL.sh $*
+;;
+    *)
+     ;;
+  esac
 exit 0

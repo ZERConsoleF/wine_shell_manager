@@ -4,12 +4,12 @@
 
  ## How to install
  ### First
- You must have `wine` and can have `bash`, `dpkg`, `git` in your environment.
+ You must have `wine` and can get `bash`, `dpkg`, `git` in your environment.
   - Suggest OS environment:Debian 11.0 and over
 
  ## Second
   - Pull repos ```git clone https://github.com/ZERConsoleF/wine_shell_manager.git``` in your computer.
-  - Goto you directory ```cd wine_shell_manager```, Run command ```chmod +x INSTAL.sh;./INSTALL.sh```.
+  - Goto you directory ```cd wine_shell_manager```, Run command ```chmod +x INSTALL.sh;./INSTALL.sh```.
     - Suggest:We suggest you install in default, and dont install deb package.
   - Run command ```wine-manager_runner.sh``` to check installion.
 
@@ -20,18 +20,13 @@
   - Have Fun!
 
  ## Fix BUGGY
-  - Fix cannot use audio when use monitor with pulseaudo.
-    - Deal with
-      - Change ```adm.sprit``` and ```wineman.sprit``` script.
-      - Use pulseaudio network thunnel and virtual sink.
-  - Fix pulseaudio network can not output audio.
-
- ## Have BUGGY
   - Pulseaudio maybe crash in unexcepted! 
+ 
+ ## Add function
+  - Create Desktop in your environment
 
 ## UPDATE Progress
- - [2023/04/07 --:--:--] Create repos
- - [2023/04/07 --:--:--] Push inital commit
+ - ===Hidden 2 Information===
  - [2023/04/07 --:--:--] Push inital project
  - [2023/04/07 --:--:--] Push uninstall function
  - [2023/04/08 00:00:--] Chnage README
@@ -48,3 +43,8 @@
      - improve install and uninstall ways.
      - fix user login problem.
  - [2023/04/21 21:54:35] To deal with user login problems.
+ - [2023/07/01 01:37:24] Fix up something,change install ways and create new function.
+   - Fix bug:
+     - pulseaudio maybe crash in unexcepted!
+   - Add function:
+     - create desktop in your environment.

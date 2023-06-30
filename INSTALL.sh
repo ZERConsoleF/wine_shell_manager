@@ -14,8 +14,11 @@ fi
 
 echo "===Welcome to Wine Manager Installer==="
 echo "Install Version:${VERSION}"
+echo "Installer script local workspace:$(dirname $0)"
 echo ""
-read -p "Input install directory [Default:${DEFAULT_DIR}]:" s_dir
+#read -p "Input install directory [Default:${DEFAULT_DIR}]:" s_dir
+echo "Input install directory [Default:${DEFAULT_DIR}]: [Disable Input]"
+echo "WARNING:Because it can make the conflict in you environment,disable it!"
 
 if [[ ! $s_dir ]];then
   echo "You not input some string, using default!"
@@ -53,9 +56,15 @@ read -p "Do you want to install fake deb package [N/y]:" yn
 if [[ $yn == "Y" || $yn == "y" ]];then
   echo "Build fake deb package..."
   echo "#/bin/bash" >> $(dirname $0)/deb-build/DEBIAN/postinst
-  echo "cd $DEFAULT_DIR;$DEFAULT_DIR/INSTALL.sh" >> $(dirname $0)/deb-build/DEBIAN/postinst
+  echo "echo Not support reconfigure!" >> $(dirname $0)/deb-build/DEBIAN/postinst
   echo "#/bin/bash" >> $(dirname $0)/deb-build/DEBIAN/postrm
+  echo 'case "$*" in
+    purge)' >> $(dirname $0)/deb-build/DEBIAN/postrm
   echo "cd $DEFAULT_DIR;$DEFAULT_DIR/UNINSTALL.sh "'$*' >> $(dirname $0)/deb-build/DEBIAN/postrm
+  echo ';;
+    *)
+     ;;
+  esac' >> $(dirname $0)/deb-build/DEBIAN/postrm
   echo "exit 0" >> $(dirname $0)/deb-build/DEBIAN/postrm
   dpkg -b $(dirname $0)/deb-build $(dirname $0)/tmp
   dpkg -i $(dirname $0)/tmp/*

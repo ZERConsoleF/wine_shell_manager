@@ -27,43 +27,19 @@ menu()
    echo " 3) running contain"
    echo " 4) set config"
    echo " 5) delete config"
-   echo " 6) print desktop linker"
+   echo " 6) printer desktop linker"
    echo " 7) exit"
    echo ""
    echo ""
 }
 linker()
 {
-   LIST=()
-   index=0
-   for i in $default_rd/home/.local/share/applications/*
-   do
-   echo "$(expr $index + 1)) $(basename $i)"
-      LIST+=("$i")
-      index=$(expr $index + 1)
-   done
-   
-   read -p ":" f
-   CS=${LIST[$f]}
-   if [[ ! $CS ]];then
-      echo "Can not find,abort!"
-      return
+   if [[ -r $F_HOME/.local/share/applications ]];then
+      for i in $F_HOME/.local/share/applications/wine-manager_*
+      do
+         echo "$(basename $i):${i#*=}"
+      done
    fi
-   
-   echo "===Desktop Execute==="
-   echo ""
-   
-      echo "[Desktop Entry]"
-      echo "Version=1.0"
-      echo "Type=Application"
-      echo Name="${$(cat ${G}/.local/share/applications/wine/$1/$(basename $i) | grep Name)#*=}"
-      echo Comment="${$(cat ${G}/.local/share/applications/wine/$1/$(basename $i) | grep Comment)#*=}"
-      echo Exec=sudo -u wineman "${$(cat ${G}/.local/share/applications/wine/$1/$(basename $i) | grep Exec)#*=}"
-      echo Icon="${$(cat ${G}/.local/share/applications/wine/$1/$(basename $i) | grep Icon)#*=}"
-      echo Path="${$(cat ${G}/.local/share/applications/wine/$1/$(basename $i) | grep Path)#*=}"
-      echo Terminal=true
-   echo ""
-   echo "======"
 }
 
 while true
