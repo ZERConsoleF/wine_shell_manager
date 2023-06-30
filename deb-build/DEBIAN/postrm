@@ -1,9 +1,0 @@
-#/bin/bash
-case "$*" in
-    purge)
-   cd /home/xiaotuzi/wine_shell_manager;/home/xiaotuzi/wine_shell_manager/UNINSTALL.sh $*
-;;
-    *)
-     ;;
-  esac
-exit 0
