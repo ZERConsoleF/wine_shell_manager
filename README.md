@@ -48,3 +48,4 @@
      - pulseaudio maybe crash in unexcepted!
    - Add function:
      - create desktop in your environment.
+ - [2023/07/01 14:06:38] To deal with logs problems.
